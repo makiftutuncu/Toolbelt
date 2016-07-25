@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/mehmetakiftutuncu/Toolbelt'
     gitUrl = 'https://github.com/mehmetakiftutuncu/Toolbelt.git'
 
-    libraryVersion = '1.0.1'
+    libraryVersion = '1.0.2'
 
     developerId = 'mehmetakiftutuncu'
     developerName = 'Mehmet Akif Tutuncu'
@@ -29,10 +29,10 @@ android {
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        minSdkVersion 8
+        minSdkVersion 9
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0.1"
+        versionCode 3
+        versionName "1.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 }

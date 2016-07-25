@@ -1,4 +1,4 @@
-# Toolbelt
+# Toolbelt [![Build Status](https://travis-ci.org/mehmetakiftutuncu/Toolbelt.svg?branch=master)](https://travis-ci.org/mehmetakiftutuncu/Toolbelt)
 An Android library for common tools and utilities
 
 How to Include In Your Project?
