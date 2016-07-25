@@ -1,9 +1,9 @@
-# Toolbelt [![Build Status](https://travis-ci.org/mehmetakiftutuncu/Toolbelt.svg?branch=master)](https://travis-ci.org/mehmetakiftutuncu/Toolbelt)
+# Toolbelt [![Build Status](https://travis-ci.org/mehmetakiftutuncu/Toolbelt.svg?branch=master)](https://travis-ci.org/mehmetakiftutuncu/Toolbelt) [ ![Download](https://api.bintray.com/packages/mehmetakiftutuncu/maven/toolbelt/images/download.svg) ](https://bintray.com/mehmetakiftutuncu/maven/toolbelt/_latestVersion)
 An Android library for common tools and utilities
 
 How to Include In Your Project?
 ------------------------------
-Add following repository and compile items to ```build.gradle``` file in your application module.
+Add following repository and compile items to ```build.gradle``` file in your application module. Don't forget to replace ```[latestVersion]``` with the latest version number. You can find it at the title of this document.
 
 ```gradle
 repositories {
@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.mehmetakiftutuncu:toolbelt:1.0.2'
+    compile 'com.github.mehmetakiftutuncu:toolbelt:[latestVersion]'
 }
 ```
 
