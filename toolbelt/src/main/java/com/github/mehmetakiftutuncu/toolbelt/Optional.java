@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
  * @see Some
  * @see None
  *
- * @author Mehmet Akif Tütüncü
+ * @author Mehmet Akif Tutuncu
  */
 public class Optional<T> {
     /**

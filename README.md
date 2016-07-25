@@ -1,6 +1,24 @@
 # Toolbelt
 An Android library for common tools and utilities
 
+How to Include In You Project?
+------------------------------
+Add following repository and compile items to ```build.gradle``` file in your application module.
+
+```
+repositories {
+    maven {url 'https://dl.bintray.com/mehmetakiftutuncu/maven'}
+}
+
+dependencies {
+    compile 'com.github.mehmetakiftutuncu:toolbelt:1.0.0'
+}
+```
+
+What's In It?
+--------------
+*To be completed*
+
 License
 --------------
 Toolbelt is licensed under Apache License Version 2.0.

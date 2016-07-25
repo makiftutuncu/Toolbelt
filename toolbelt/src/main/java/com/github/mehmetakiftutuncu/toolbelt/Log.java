@@ -6,7 +6,7 @@ import java.util.Locale;
  * Wraps {@link android.util.Log} methods to get dynamic tags using the caller reference
  * and supports message formatting as in {@link String#format}
  *
- * @author Mehmet Akif Tütüncü
+ * @author Mehmet Akif Tutuncu
  */
 public final class Log {
     /**

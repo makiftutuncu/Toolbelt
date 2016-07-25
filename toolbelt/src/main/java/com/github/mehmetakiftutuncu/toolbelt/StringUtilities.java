@@ -6,7 +6,7 @@ import java.util.Iterator;
 /**
  * Contains some utility methods related to {@link String}s
  *
- * @author Mehmet Akif Tütüncü
+ * @author Mehmet Akif Tutuncu
  */
 public final class StringUtilities {
     /**
@@ -23,7 +23,7 @@ public final class StringUtilities {
     /**
      * <p>Combines elements in given collection to make a string</p>
      *
-     * <p>Example:
+     * <p>Example:</p>
      * <pre>
      *     List&lt;String&gt; list = new ArrayList&lt;&gt;();
      *     list.add("foo");
@@ -33,7 +33,6 @@ public final class StringUtilities {
      *     // This will return: ['foo', 'bar', 'baz']
      *     StringUtilities.makeString(list, "['", "', '", "']");
      * </pre>
-     * </p>
      *
      * @param collection Collection from which to make a string
      * @param prefix     String to add at the beginning of the resulting string
@@ -69,7 +68,7 @@ public final class StringUtilities {
     /**
      * <p>Combines elements in given collection to make a string</p>
      *
-     * <p>Example:
+     * <p>Example:</p>
      * <pre>
      *     List&lt;String&gt; list = new ArrayList&lt;&gt;();
      *     list.add("foo");
@@ -79,7 +78,6 @@ public final class StringUtilities {
      *     // This will return: foo, bar, baz
      *     StringUtilities.makeString(list, ", ");
      * </pre>
-     * </p>
      *
      * @param collection Collection from which to make a string
      * @param separator  String to add between elements of the collection

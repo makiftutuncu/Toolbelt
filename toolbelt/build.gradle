@@ -1,22 +1,39 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'toolbelt'
+
+    publishedGroupId = 'com.github.mehmetakiftutuncu'
+    libraryName = 'Toolbelt'
+    artifact = 'toolbelt'
+
+    libraryDescription = 'An Android library for common tools and utilities'
+
+    siteUrl = 'https://github.com/mehmetakiftutuncu/Toolbelt'
+    gitUrl = 'https://github.com/mehmetakiftutuncu/Toolbelt.git'
+
+    libraryVersion = '1.0.1'
+
+    developerId = 'mehmetakiftutuncu'
+    developerName = 'Mehmet Akif Tutuncu'
+    developerEmail = 'm.akif.tutuncu@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 8
         targetSdkVersion 24
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
     }
 }
 
@@ -26,3 +43,6 @@ dependencies {
     androidTestCompile 'com.android.support.test:runner:0.4'
     androidTestCompile 'com.android.support.test:rules:0.4'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
