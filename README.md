@@ -1,11 +1,11 @@
 # Toolbelt
 An Android library for common tools and utilities
 
-How to Include In You Project?
+How to Include In Your Project?
 ------------------------------
 Add following repository and compile items to ```build.gradle``` file in your application module.
 
-```
+```gradle
 repositories {
     maven {url 'https://dl.bintray.com/mehmetakiftutuncu/maven'}
 }
