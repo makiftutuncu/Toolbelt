@@ -104,6 +104,17 @@ public class Optional<T> {
     }
 
     /**
+     * Changes this to given alternative if the value does not exist, just returns itself if the value exists
+     *
+     * @param alternative Alternative optional value
+     *
+     * @return Alternative if the value does not exist ot itself otherwise
+     */
+    public Optional<T> or(Optional<T> alternative) {
+        return isDefined() ? this : alternative;
+    }
+
+    /**
      * Checks whether the value exists
      *
      * @return true if the value exists

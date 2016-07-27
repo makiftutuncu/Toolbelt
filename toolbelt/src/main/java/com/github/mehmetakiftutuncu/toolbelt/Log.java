@@ -4,7 +4,8 @@ import java.util.Locale;
 
 /**
  * Wraps {@link android.util.Log} methods to get dynamic tags using the caller reference
- * and supports message formatting as in {@link String#format}
+ * and supports message formatting as done in {@link String#format}.
+ * It also simplifies log levels to just <code>DEBUG</code>, <code>WARN</code> and <code>ERROR</code>.
  *
  * @author Mehmet Akif Tutuncu
  */
@@ -21,6 +22,17 @@ public final class Log {
     }
 
     /**
+     * Logs with debug level
+     *
+     * @param tag     Tag for the log
+     * @param message Message to log
+     * @param args    Arguments to replace in the message
+     */
+    public static void debug(String tag, String message, Object... args) {
+        android.util.Log.d(tag, String.format(Locale.ENGLISH, message, args));
+    }
+
+    /**
      * Logs with warn level
      *
      * @param caller  Reference to whoever is calling this method
@@ -29,6 +41,17 @@ public final class Log {
      */
     public static void warn(Class<?> caller, String message, Object... args) {
         android.util.Log.w(tag(caller), String.format(Locale.ENGLISH, message, args));
+    }
+
+    /**
+     * Logs with warn level
+     *
+     * @param tag     Tag for the log
+     * @param message Message to log
+     * @param args    Arguments to replace in the message
+     */
+    public static void warn(String tag, String message, Object... args) {
+        android.util.Log.w(tag, String.format(Locale.ENGLISH, message, args));
     }
 
     /**
@@ -43,6 +66,17 @@ public final class Log {
     }
 
     /**
+     * Logs with error level
+     *
+     * @param tag     Tag for the log
+     * @param message Message to log
+     * @param args    Arguments to replace in the message
+     */
+    public static void error(String tag, String message, Object... args) {
+        android.util.Log.e(tag, String.format(Locale.ENGLISH, message, args));
+    }
+
+    /**
      * Logs with error level and logs stack trace for the throwable
      *
      * @param caller    Reference to whoever is calling this method
@@ -52,6 +86,18 @@ public final class Log {
      */
     public static void error(Class<?> caller, Throwable throwable, String message, Object... args) {
         android.util.Log.e(tag(caller), String.format(Locale.ENGLISH, message, args), throwable);
+    }
+
+    /**
+     * Logs with error level and logs stack trace for the throwable
+     *
+     * @param tag       Tag for the log
+     * @param throwable Throwable whose stack trace to log
+     * @param message   Message to log
+     * @param args      Arguments to replace in the message
+     */
+    public static void error(String tag, Throwable throwable, String message, Object... args) {
+        android.util.Log.e(tag, String.format(Locale.ENGLISH, message, args), throwable);
     }
 
     /**

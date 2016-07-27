@@ -44,6 +44,17 @@ public class OptionalUnitTest {
         assertEquals(Integer.valueOf(3), empty.getOrElse(3));
     }
 
+    @Test public void orOptional() {
+        Optional<Integer> empty       = Optional.empty();
+        Optional<Integer> existing    = Optional.with(3);
+        Optional<Integer> alternative = Optional.with(5);
+
+        assertNotNull(empty);
+        assertNotNull(existing);
+        assertEquals(alternative, empty.or(alternative));
+        assertEquals(existing, existing.or(alternative));
+    }
+
     @Test public void toStringEmptyOptional() {
         Optional<Integer> empty = Optional.empty();
 
