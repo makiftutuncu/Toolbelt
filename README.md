@@ -1,7 +1,7 @@
 # Toolbelt [![Build Status](https://travis-ci.org/mehmetakiftutuncu/Toolbelt.svg?branch=master)](https://travis-ci.org/mehmetakiftutuncu/Toolbelt) [ ![Download](https://api.bintray.com/packages/mehmetakiftutuncu/maven/toolbelt/images/download.svg) ](https://bintray.com/mehmetakiftutuncu/maven/toolbelt/_latestVersion)
 Toolbelt is an Android library for common tools and utilities for optional values, easier logging and operations on ```String```s. I need these mostly boilerplate stuff for almost all of my Android projects so I decided to serve them as a library.
 
-##How to Include In Your Project?
+## How to Include In Your Project?
 Toolbelt is served on ```Bintray``` and ```jCenter```. So, simply add following
 
 ```gradle
@@ -16,8 +16,8 @@ maven {url 'https://dl.bintray.com/mehmetakiftutuncu/maven'}
 
 inside ```repositories```. Don't forget to replace ```latestVersion``` with the latest version number found in the title.
 
-##What's In It?
-###1. [Optional](/blob/master/toolbelt/src/main/java/com/github/mehmetakiftutuncu/toolbelt/Optional.java)
+## What's In It?
+### 1. Optional
 It represents an optional value that may or may not exist. This is an attempt to avoid using ```null```s as they are not safe.
 
 ```java
@@ -64,7 +64,7 @@ public Optional<String> getExtensionSafe(String fileName) {
 }
 ```
 
-###2. [Log](/blob/master/toolbelt/src/main/java/com/github/mehmetakiftutuncu/toolbelt/Log.java)
+### 2. Log
 It wraps ```android.util.Log``` methods to get dynamic tags using the caller reference and supports message formatting as done in ```String.format()```. It also simplifies log levels to just ```DEBUG```, ```WARN``` and ```ERROR```.
 
 ```java
@@ -103,7 +103,7 @@ Log.debug(this, "Doing some work with '%s' and '%d'...", "test", 123);
 Log.warn(Bar.class, "Doing some work with '%s' and '%d'...", "test", 123);
 ```
 
-###3. [StringUtilities](/blob/master/toolbelt/src/main/java/com/github/mehmetakiftutuncu/toolbelt/StringUtilities.java)
+### 3. StringUtilities
 Name says it all.
 
 ```java
@@ -121,10 +121,10 @@ StringUtilities.makeString(list, "['", "', '", "']"); // Yields: "['foo', 'bar',
 StringUtilities.makeString(list, ", ");               // Yields: "foo, bar, baz"
 ```
 
-##Contribution
+## Contribution
 Please feel free to and contribute. I'd love to hear your feedback, issue reports and pull requests.
 
-##License
+## License
 Toolbelt is licensed under Apache License Version 2.0.
 
 ```
