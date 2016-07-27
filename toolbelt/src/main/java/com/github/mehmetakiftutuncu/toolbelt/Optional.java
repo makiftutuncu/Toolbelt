@@ -40,7 +40,7 @@ public class Optional<T> {
         }
 
         @Override public N get() throws NoSuchElementException {
-            throw new NoSuchElementException("get() called on an empty optional! User getOrElse() or check for existence with isDefined() first.");
+            throw new NoSuchElementException("get() called on an empty optional! Use getOrElse() or check for existence with isDefined() first.");
         }
 
         @Override public String toString() {
