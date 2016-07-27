@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/mehmetakiftutuncu/Toolbelt'
     gitUrl = 'https://github.com/mehmetakiftutuncu/Toolbelt.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.3'
 
     developerId = 'mehmetakiftutuncu'
     developerName = 'Mehmet Akif Tutuncu'
