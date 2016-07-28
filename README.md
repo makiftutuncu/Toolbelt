@@ -1,4 +1,5 @@
-# Toolbelt [![Build Status](https://travis-ci.org/mehmetakiftutuncu/Toolbelt.svg?branch=master)](https://travis-ci.org/mehmetakiftutuncu/Toolbelt) [ ![Download](https://api.bintray.com/packages/mehmetakiftutuncu/maven/toolbelt/images/download.svg) ](https://bintray.com/mehmetakiftutuncu/maven/toolbelt/_latestVersion)
+# Toolbelt [![Build Status](https://travis-ci.org/mehmetakiftutuncu/Toolbelt.svg?branch=master)](https://travis-ci.org/mehmetakiftutuncu/Toolbelt) [ ![Download](https://api.bintray.com/packages/mehmetakiftutuncu/maven/toolbelt/images/download.svg) ](https://bintray.com/mehmetakiftutuncu/maven/toolbelt/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Toolbelt-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3989)
+Close
 Toolbelt is an Android library for common tools and utilities for optional values, easier logging and operations on ```String```s. I need these mostly boilerplate stuff for almost all of my Android projects so I decided to serve them as a library.
 
 ## How to Include In Your Project?
