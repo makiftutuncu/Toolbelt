@@ -1,5 +1,8 @@
 package com.github.mehmetakiftutuncu.toolbelt;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -16,7 +19,7 @@ public final class StringUtilities {
      *
      * @return true if given string is null or empty or false otherwise
      */
-    public static boolean isEmpty(String s) {
+    public static boolean isEmpty(@Nullable String s) {
         return s == null || s.isEmpty();
     }
 
@@ -41,7 +44,10 @@ public final class StringUtilities {
      *
      * @return Combined string or empty string if collection is null
      */
-    public static String makeString(Collection collection, String prefix, String separator, String suffix) {
+    public static String makeString(@Nullable Collection collection,
+                                    @NonNull String prefix,
+                                    @NonNull String separator,
+                                    @NonNull String suffix) {
         if (collection == null) return "";
 
         StringBuilder stringBuilder = new StringBuilder(prefix);
@@ -84,7 +90,7 @@ public final class StringUtilities {
      *
      * @return Combined string or empty string if collection is null
      */
-    public static String makeString(Collection collection, String separator) {
+    public static String makeString(@Nullable Collection collection, @NonNull String separator) {
         return makeString(collection, "", separator, "");
     }
 }

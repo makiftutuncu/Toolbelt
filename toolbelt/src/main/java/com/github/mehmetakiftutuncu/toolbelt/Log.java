@@ -1,5 +1,8 @@
 package com.github.mehmetakiftutuncu.toolbelt;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
 import java.util.Locale;
 
 /**
@@ -17,7 +20,7 @@ public final class Log {
      * @param message Message to log
      * @param args    Arguments to replace in the message
      */
-    public static void debug(Class<?> caller, String message, Object... args) {
+    public static void debug(@Nullable Class<?> caller, String message, Object... args) {
         android.util.Log.d(tag(caller), String.format(Locale.ENGLISH, message, args));
     }
 
@@ -28,7 +31,7 @@ public final class Log {
      * @param message Message to log
      * @param args    Arguments to replace in the message
      */
-    public static void debug(String tag, String message, Object... args) {
+    public static void debug(@NonNull String tag, String message, Object... args) {
         android.util.Log.d(tag, String.format(Locale.ENGLISH, message, args));
     }
 
@@ -39,7 +42,7 @@ public final class Log {
      * @param message Message to log
      * @param args    Arguments to replace in the message
      */
-    public static void warn(Class<?> caller, String message, Object... args) {
+    public static void warn(@Nullable Class<?> caller, String message, Object... args) {
         android.util.Log.w(tag(caller), String.format(Locale.ENGLISH, message, args));
     }
 
@@ -50,7 +53,7 @@ public final class Log {
      * @param message Message to log
      * @param args    Arguments to replace in the message
      */
-    public static void warn(String tag, String message, Object... args) {
+    public static void warn(@NonNull String tag, String message, Object... args) {
         android.util.Log.w(tag, String.format(Locale.ENGLISH, message, args));
     }
 
@@ -61,7 +64,7 @@ public final class Log {
      * @param message Message to log
      * @param args    Arguments to replace in the message
      */
-    public static void error(Class<?> caller, String message, Object... args) {
+    public static void error(@Nullable Class<?> caller, String message, Object... args) {
         android.util.Log.e(tag(caller), String.format(Locale.ENGLISH, message, args));
     }
 
@@ -72,7 +75,7 @@ public final class Log {
      * @param message Message to log
      * @param args    Arguments to replace in the message
      */
-    public static void error(String tag, String message, Object... args) {
+    public static void error(@NonNull String tag, String message, Object... args) {
         android.util.Log.e(tag, String.format(Locale.ENGLISH, message, args));
     }
 
@@ -84,7 +87,7 @@ public final class Log {
      * @param message   Message to log
      * @param args      Arguments to replace in the message
      */
-    public static void error(Class<?> caller, Throwable throwable, String message, Object... args) {
+    public static void error(@Nullable Class<?> caller, Throwable throwable, String message, Object... args) {
         android.util.Log.e(tag(caller), String.format(Locale.ENGLISH, message, args), throwable);
     }
 
@@ -96,7 +99,7 @@ public final class Log {
      * @param message   Message to log
      * @param args      Arguments to replace in the message
      */
-    public static void error(String tag, Throwable throwable, String message, Object... args) {
+    public static void error(@NonNull String tag, Throwable throwable, String message, Object... args) {
         android.util.Log.e(tag, String.format(Locale.ENGLISH, message, args), throwable);
     }
 
@@ -107,7 +110,7 @@ public final class Log {
      *
      * @return Empty string if caller is null or caller reference's class name
      */
-    private static String tag(Class<?> caller) {
+    @NonNull private static String tag(@Nullable Class<?> caller) {
         return caller == null ? "" : caller.getSimpleName().replaceAll("\\$", "");
     }
 }

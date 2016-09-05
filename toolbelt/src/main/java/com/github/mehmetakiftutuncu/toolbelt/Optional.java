@@ -1,5 +1,8 @@
 package com.github.mehmetakiftutuncu.toolbelt;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
 import java.util.NoSuchElementException;
 
 /**
@@ -20,15 +23,15 @@ public class Optional<T> {
      * @param <S> Type of the value
      */
     static final class Some<S> extends Optional<S> {
-        private Some(S value) {
+        private Some(@NonNull S value) {
             this.value = value;
         }
 
-        @Override public S get() throws NoSuchElementException {
+        @NonNull @Override public S get() throws NoSuchElementException {
             return value;
         }
 
-        @Override public String toString() {
+        @NonNull @Override public String toString() {
             return "Some(" + value + ")";
         }
     }
@@ -43,13 +46,13 @@ public class Optional<T> {
             throw new NoSuchElementException("get() called on an empty optional! Use getOrElse() or check for existence with isDefined() first.");
         }
 
-        @Override public String toString() {
+        @NonNull @Override public String toString() {
             return "None";
         }
     }
 
     /** The value hold */
-    protected T value;
+    @Nullable protected T value;
 
     /** Private constructor doing nothing */
     private Optional() {}
@@ -62,7 +65,7 @@ public class Optional<T> {
      *
      * @return An empty optional if the value is null or an existing optional otherwise
      */
-    public static<W> Optional<W> with(W value) {
+    @NonNull public static<W> Optional<W> with(W value) {
         return (value == null) ? new None<W>() : new Some<>(value);
     }
 
@@ -73,7 +76,7 @@ public class Optional<T> {
      *
      * @return An empty optional
      */
-    public static<E> Optional<E> empty() {
+    @NonNull public static<E> Optional<E> empty() {
         return new None<>();
     }
 
@@ -99,7 +102,7 @@ public class Optional<T> {
      *
      * @return The value or given default value
      */
-    public T getOrElse(T defaultValue) {
+    @NonNull public T getOrElse(@NonNull T defaultValue) {
         return isDefined() ? value : defaultValue;
     }
 
@@ -110,7 +113,7 @@ public class Optional<T> {
      *
      * @return Alternative if the value does not exist ot itself otherwise
      */
-    public Optional<T> or(Optional<T> alternative) {
+    @NonNull public Optional<T> or(@NonNull Optional<T> alternative) {
         return isDefined() ? this : alternative;
     }
 

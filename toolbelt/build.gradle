@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/mehmetakiftutuncu/Toolbelt'
     gitUrl = 'https://github.com/mehmetakiftutuncu/Toolbelt.git'
 
-    libraryVersion = '1.0.3'
+    libraryVersion = '1.1.0'
 
     developerId = 'mehmetakiftutuncu'
     developerName = 'Mehmet Akif Tutuncu'
@@ -26,14 +26,18 @@ ext {
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "24.0.1"
 
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 24
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
     }
 }
 
@@ -42,6 +46,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test:runner:0.4'
     androidTestCompile 'com.android.support.test:rules:0.4'
+    compile 'com.android.support:support-annotations:24.2.0'
 }
 
 apply plugin: 'com.jfrog.bintray'
