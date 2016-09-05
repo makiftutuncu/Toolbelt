@@ -1,4 +1,4 @@
-# Toolbelt [![Build Status](https://travis-ci.org/mehmetakiftutuncu/Toolbelt.svg?branch=master)](https://travis-ci.org/mehmetakiftutuncu/Toolbelt) [ ![Download](https://api.bintray.com/packages/mehmetakiftutuncu/maven/toolbelt/images/download.svg) ](https://bintray.com/mehmetakiftutuncu/maven/toolbelt/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Toolbelt-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3989)
+# Toolbelt [![Build Status](https://travis-ci.org/mehmetakiftutuncu/Toolbelt.svg?branch=master)](https://travis-ci.org/mehmetakiftutuncu/Toolbelt) [![Download](https://api.bintray.com/packages/mehmetakiftutuncu/maven/toolbelt/images/download.svg)](https://bintray.com/mehmetakiftutuncu/maven/toolbelt/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Toolbelt-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3989)
 Toolbelt is an Android library for common tools and utilities for optional values, easier logging and operations on ```String```s. I need these mostly boilerplate stuff for almost all of my Android projects so I decided to serve them as a library.
 
 ## How to Include In Your Project?
@@ -119,6 +119,26 @@ list.add("baz");
 // These methods work on any collection extending java.util.Collection
 StringUtilities.makeString(list, "['", "', '", "']"); // Yields: "['foo', 'bar', 'baz']"
 StringUtilities.makeString(list, ", ");               // Yields: "foo, bar, baz"
+```
+
+### 4. Timer
+You can use it to time stuff and see how long they take to run.
+
+```java
+// Manage start and stop yourself
+Timer.start("foo");
+// Do some work
+long duration = Timer.stop("foo");
+printf("Finished in %d milliseconds!", duration);
+
+// Or wrap a block of work and time it automatically
+Timer.ActionResult<Double> piResult = Timer.time(new Timer.Action<Double>() {
+    @Override public Double perform() {
+        // Perform some advanced math here to calculate the value of PI
+        return 3.14;
+    }
+});
+printf("Calculated PI as %f and it took %d milliseconds!", piResult.result, piResult.duration);
 ```
 
 ## Contribution
